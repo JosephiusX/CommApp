@@ -3,21 +3,21 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import {addExpense} from './actions/expenses';
+import {addTopic} from './actions/topics';
 import {setTextFilter} from './actions/filters';
-import getVisibleExpenses from './selectors/expenses';
+import getVisibleTopics from './selectors/topics';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 const store = configureStore();
 
-store.dispatch(addExpense({description: 'Water bill', amount: 4500}));
-store.dispatch(addExpense({description: 'Gas bill', createdAt: 1000}));
-store.dispatch(addExpense({description: 'Rent', amount: 1095, createdAt: 5000}));
+store.dispatch(addTopic({description: 'Water bill', amount: 4500}));
+store.dispatch(addTopic({description: 'Gas bill', createdAt: 1000}));
+store.dispatch(addTopic({description: 'Rent', amount: 1095, createdAt: 5000}));
 
 const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
+const visibleTopics = getVisibleTopics(state.topics, state.filters);
+console.log(visibleTopics);
 
 const jsx = (
 	<Provider store={store}>

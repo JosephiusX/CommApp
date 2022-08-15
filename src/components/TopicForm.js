@@ -11,15 +11,15 @@ import 'react-dates/lib/css/_datepicker.css';
 // console.log(now.format('MMM Do YYYY'));
 // console.log(now.format('MMM Do, YYYY'));
 
-export default class ExpenseForm extends React.Component {
+export default class TopicForm extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			description: props.expense ? props.expense.description : '',
-			note: props.expense ? props.expense.note : '',
-			amount: props.expense ? (props.expense.amount / 100).toString() : '',
-			createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+			description: props.topic ? props.topic.description : '',
+			note: props.topic ? props.topic.note : '',
+			amount: props.topic ? (props.topic.amount / 100).toString() : '',
+			createdAt: props.topic ? moment(props.topic.createdAt) : moment(),
 			calendarFocused: false,
 			error: '',
 		};
@@ -88,7 +88,7 @@ export default class ExpenseForm extends React.Component {
 						value={this.state.note}
 						onChange={this.onNoteChange}
 					></textarea>
-					<button>Add Expense</button>
+					<button>Add Topic</button>
 				</form>
 			</div>
 		);
