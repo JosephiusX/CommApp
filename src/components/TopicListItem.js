@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const TopicsListItem = ({id, description, amount, createdAt}) => (
+const TopicListItem = ({id, description, phraseList, createdAt}) => (
 	<div>
 		<Link to={`/edit/${id}`}>
 			<h3>{description}</h3>
@@ -12,4 +12,4 @@ const TopicsListItem = ({id, description, amount, createdAt}) => (
 	</div>
 );
 
-export default TopicsListItem;
+export default TopicListItem;

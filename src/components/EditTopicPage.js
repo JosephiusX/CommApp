@@ -11,7 +11,6 @@ const EditTopicPage = props => {
 				onSubmit={topic => {
 					props.dispatch(editTopic(props.topic.id, topic));
 					props.history.push('/');
-					// console.log('updated', expense);
 				}}
 			/>
 			<button
@@ -28,7 +27,7 @@ const EditTopicPage = props => {
 
 const mapStateToProps = (state, props) => {
 	return {
-		topics: state.topics.find(topic => topic.id === props.match.params.id),
+		topic: state.topics.find(topic => topic.id === props.match.params.id),
 	};
 };
 
