@@ -1,13 +1,12 @@
 import uuid from 'uuid';
 
 // ADD_Topic
-export const addTopic = ({description = '', note = '', amount = 0} = {}) => ({
+export const addTopic = ({description = '', note = ''} = {}) => ({
 	type: 'ADD_TOPIC',
 	topic: {
 		id: uuid(),
 		description,
 		note,
-		amount,
 	},
 });
 
@@ -23,3 +22,4 @@ export const editTopic = (id, updates) => ({
 	id,
 	updates,
 });
+ 

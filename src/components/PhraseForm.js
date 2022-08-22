@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default class TopicForm extends React.Component {
+export default class PhraseForm extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			description: props.topic ? props.topic.description : '',
-			note: props.topic ? props.topic.note : '',
+			description: props.phrase ? props.phrase.description : '',
+			note: props.phrase ? props.phrase.note : '',
 			error: '',
 		};
 	}
@@ -48,7 +48,7 @@ export default class TopicForm extends React.Component {
 						value={this.state.note}
 						onChange={this.onNoteChange}
 					></textarea>
-					<button>Add Topic</button>
+					<button>Add Phrase</button>
 				</form>
 			</div>
 		);

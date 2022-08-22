@@ -1,9 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {DateRangePicker} from 'react-dates';
 import {setTextFilter} from '../actions/filters';
 
-class TopicListFilters extends React.Component {
+class PhraseListFilters extends React.Component {
 	state = {
 		calendarFocused: null,
 	};
@@ -31,4 +30,4 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(mapStateToProps)(TopicListFilters);
+export default connect(mapStateToProps)(PhraseListFilters);

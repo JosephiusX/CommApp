@@ -1,14 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const TopicListItem = ({id, description, phraseList}) => (
+const TopicListItem = ({id, topic}) => (
 	<div>
 		<Link to={`/edit/${id}`}>
-			<h3>{description}</h3>
+			<h3>{topic}</h3>
 		</Link>
-		<p>
-			{phraseList}
-		</p>
 	</div>
 );
 

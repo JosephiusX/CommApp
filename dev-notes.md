@@ -27,14 +27,66 @@ Well keep the textbox for filtering our topics
         - topic link directs to Edit topic page. 
 
     Edit Topic Page
-        - remove amount textbox
-        - remove datepicker
+ remove amount textbox 
+
+            DONE
+ remove datepicker 
+
+            DONE
+ adding addPhrase and removePhrase actions to topics actions 
+
+            DONE
+ working on phrase list item
+
+            DONE
+ PhraseListFilters
+        incase i want to filter phrases differently (number of times used)
+
+            DONE
+ lets try a PhraseDashboardPage
+i have it imported and created a route in appRouter
+
+working on editPhrase page,
+
+    ! PhraseForm is next
+
+I want to be able to add multiple phrases to a topic(note currently)
+
+    > copied TopicList and renanmed it PhraseList in components
+Next I want to turn them into links that adds the Phrase to the text area
+
+need to create phrases in selectors
+
+    DONE
+
+now to create a phrases reducer
+
+    DONE
+
+adding phrases to configureStore
+
+    DONE
+
+setting up link TopicListItem component
+
+changing instances of [description, note] to [topic, phrase]
+
+I want to see the phrases in the edit topic page
+
+I want an edit phrase page when the phrase is selected from the 
+
+Instead of replaceing a note when one is added with the edit topic page, I want to add another note (phrase)
+
 
     Add Topic Page
+        - remove amount textbox DONE
+        - remove datepicker DONE
 
     Add Phrase Page
 
     Edit Phrase Page
+        ? might not need, should be able to handle this with the Edit topic page thats already in place
+creating 
 
 currently working on removing the datepicker
 
@@ -47,4 +99,9 @@ currently working on removing the datepicker
             * topicsListFilters component
         ? ''
             * topicForm component
-        ? ''
+            * filter redusers default state
+            * removed amount from topics.js
+            
+At this point the datepicker, and amount are nowhere to be found and the app is otherwise running as expected
+
+
