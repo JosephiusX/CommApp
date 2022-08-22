@@ -1,15 +1,15 @@
 // Get visible expenses
-import moment from 'moment';
+// import moment from 'moment';
 
-export default (topics, {text, sortBy, startDate, endDate}) => {
+export default (topics, {text, sortBy}) => {
 	return topics
 	.filter(topic => {
-			const createdAtMoment = moment(topic.createdAt);
-			const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
-			const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
-			const textMatch = topic.description.toLowerCase().includes(text.toLowerCase());
+		const textMatch = topic.description.toLowerCase().includes(text.toLowerCase());
+			// const createdAtMoment = moment(topic.createdAt);
+			// const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
+			// const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
 
-			return startDateMatch && endDateMatch && textMatch;
+			return textMatch;
 		})
 		.sort((a, b) => {
 			if (sortBy === 'date') {
